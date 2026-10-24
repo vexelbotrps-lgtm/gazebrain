@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f3ed">
+    <meta
+      name="description"
+      content="Meet EyeSync: an open-source, webcam-based accessibility project for hands-free computer control."
+    >
+    <title>EyeSync — hands-free, your way</title>
+    <link rel="icon" href="assets/eyesync.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="EyeSync home">
+        <img src="assets/eyesync.svg" width="38" height="38" alt="">
+        <span>eyesync<span class="brand-period">.</span></span>
+      </a>
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="#gestures">Gestures</a>
+        <a href="#getting-started">Get started</a>
+        <a href="#voice-commands">Voice commands</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <button class="icon-button theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.7A8.4 8.4 0 0 1 8.3 3.8 8.4 8.4 0 1 0 20.2 15.7Z"/>
+          </svg>
+        </button>
+        <a class="button button-small button-dark" href="https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System" target="_blank" rel="noreferrer">
+          View on GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> AN OPEN-SOURCE ACCESSIBILITY PROJECT</p>
+          <h1 id="hero-title">A little movement.<br><span>A lot more</span> possibility.</h1>
+          <p class="hero-description">
+            EyeSync explores a more accessible way to use a Windows computer —
+            with head movement, facial gestures, a webcam, and tools you already have.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-accent" href="#getting-started">Set up EyeSync <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#gestures">Explore the gestures <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-facts" aria-label="Project highlights">
+            <span><span class="fact-icon">⌁</span> Webcam-based</span>
+            <span><span class="fact-icon">⌂</span> Runs locally</span>
+            <span><span class="fact-icon">◌</span> No extra mouse hardware</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of an eye with a tracking reticle">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-crosshair crosshair-top"></div>
+          <div class="art-crosshair crosshair-left"></div>
+          <div class="art-crosshair crosshair-right"></div>
+          <div class="eye-illustration">
+            <svg viewBox="0 0 360 200" role="img" aria-labelledby="eye-title eye-desc">
+              <title id="eye-title">An eye and iris</title>
+              <desc id="eye-desc">A simple illustration representing face tracking. The website does not access your camera.</desc>
+              <path class="eye-outline" d="M24 100C63 46 117 22 180 22s117 24 156 78c-39 54-93 78-156 78S63 154 24 100Z"/>
+              <circle class="iris-ring" cx="180" cy="100" r="55"/>
+              <circle class="iris-core" cx="180" cy="100" r="38"/>
+              <circle class="pupil" cx="180" cy="100" r="18"/>
+              <circle class="eye-glint" cx="192" cy="86" r="7"/>
+            </svg>
+          </div>
+          <div class="art-label label-top"><span class="label-pulse"></span> MADE FOR MORE ACCESS</div>
+          <div class="art-label label-bottom">YOUR FACE. YOUR PACE. <span>01 / 04</span></div>
+        </div>
+      </section>
+
+      <section class="notice-band" aria-label="Important scope note">
+        <div class="notice-inner">
+          <span class="notice-mark" aria-hidden="true">i</span>
+          <p><strong>This is a project guide, not a browser controller.</strong> EyeSync’s gestures work in the local Windows app after setup. This website never turns on your camera or moves your cursor.</p>
+          <a href="#getting-started">How it works <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="section section-wrap" id="gestures" aria-labelledby="gestures-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A QUICK FIELD GUIDE</p>
+            <h2 id="gestures-title">Small gestures.<br><span>Useful actions.</span></h2>
+          </div>
+          <p class="section-intro">Choose a movement that feels comfortable. EyeSync shows live eye ratios and hold progress in its local preview and command panel.</p>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filter gestures">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All gestures <span>04</span></button>
+          <button class="filter-button" type="button" data-filter="navigation" aria-pressed="false">Navigation</button>
+          <button class="filter-button" type="button" data-filter="eyes" aria-pressed="false">Eye gesture</button>
+          <button class="filter-button" type="button" data-filter="clicks" aria-pressed="false">Clicks</button>
+          <p class="filter-status" aria-live="polite"></p>
+        </div>
+
+        <div class="gesture-grid">
+          <article class="gesture-card card-navigation" data-category="navigation">
+            <div class="card-topline"><span class="card-number">01</span><span class="card-tag">NAVIGATION</span></div>
+            <div class="gesture-symbol symbol-head" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M32 9a19 19 0 0 0-19 19v8a19 19 0 0 0 38 0v-8A19 19 0 0 0 32 9Z"/><path d="M25 28h.1M39 28h.1M25 40c4 4 10 4 14 0M8 19l7 4m41-4-7 4M6 36h7m45 0h-7"/></svg>
+            </div>
+            <h3>Move the cursor</h3>
+            <p>Move your head naturally to steer the pointer. Calibration helps map your movement to your screen.</p>
+            <div class="card-foot"><span class="step-dot"></span> Head movement</div>
+          </article>
+
+          <article class="gesture-card card-eyes" data-category="eyes">
+            <div class="card-topline"><span class="card-number">02</span><span class="card-tag">PUSH-TO-TALK</span></div>
+            <div class="gesture-symbol symbol-eye" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M6 32s9-17 26-17 26 17 26 17-9 17-26 17S6 32 6 32Z"/><circle cx="32" cy="32" r="8"/><path d="M14 10 8 5m42 5 6-5M32 4V1"/></svg>
+            </div>
+            <h3>Close both eyes</h3>
+            <p>Hold both eyes closed for 1 second to tap <kbd>Tab</kbd>. Reopen for at least 0.25 seconds before the next tap.</p>
+            <div class="card-foot"><span class="step-dot"></span> Tab · one-second hold</div>
+          </article>
+
+          <article class="gesture-card card-click" data-category="clicks">
+            <div class="card-topline"><span class="card-number">03</span><span class="card-tag">OPTIONAL CLICK</span></div>
+            <div class="gesture-symbol symbol-smile" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M23 27h.1M41 27h.1M21 37c3 7 8 10 11 10s8-3 11-10"/></svg>
+            </div>
+            <h3>Smile to click</h3>
+            <p>Hold a closed-mouth smile for 1.2 seconds to left-click. Relax your face to rearm.</p>
+            <div class="card-foot"><span class="step-dot"></span> Left click · optional</div>
+          </article>
+
+          <article class="gesture-card card-click" data-category="clicks">
+            <div class="card-topline"><span class="card-number">04</span><span class="card-tag">OPTIONAL CLICK</span></div>
+            <div class="gesture-symbol symbol-mouth" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M10 27c7-6 14-9 22-9s15 3 22 9c-6 14-13 21-22 21S16 41 10 27Z"/><path d="M15 29c5 4 11 6 17 6s12-2 17-6"/></svg>
+            </div>
+            <h3>Open your mouth</h3>
+            <p>Hold your mouth open for 1 second to right-click. Relax your mouth to rearm.</p>
+            <div class="card-foot"><span class="step-dot"></span> Right click · optional</div>
+          </article>
+        </div>
+        <p class="section-footnote">Facial click gestures are available through the setup workflow; direct tracker use keeps them off unless explicitly enabled.</p>
+      </section>
+
+      <section class="setup-section" id="getting-started" aria-labelledby="setup-title">
+        <div class="section-wrap setup-layout">
+          <div class="setup-copy">
+            <p class="eyebrow">YOUR FIRST SESSION</p>
+            <h2 id="setup-title">Start with what<br><span>you already have.</span></h2>
+            <p>EyeSync runs on Windows with Python and a webcam. The guided setup checks calibration before opening the tracker and its local command panel.</p>
+            <div class="requirements">
+              <span><b>01</b> Windows 10 / 11</span>
+              <span><b>02</b> Python 3.10–3.12</span>
+              <span><b>03</b> A webcam</span>
+            </div>
+            <a class="button button-dark" href="https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System" target="_blank" rel="noreferrer">Open the source repository <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="setup-steps">
+            <article class="setup-step">
+              <span class="step-index">01</span>
+              <div>
+                <h3>Get the project</h3>
+                <p>Download or clone the EyeSync repository, then open a terminal in its folder.</p>
+                <div class="code-line"><code>git clone https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System.git</code><button class="copy-button" type="button" data-copy="git clone https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System.git" aria-label="Copy clone command">Copy</button></div>
+              </div>
+            </article>
+            <article class="setup-step">
+              <span class="step-index">02</span>
+              <div>
+                <h3>Install requirements</h3>
+                <p>Install the Python packages listed by the project.</p>
+                <div class="code-line"><code>pip install -r requirements.txt</code><button class="copy-button" type="button" data-copy="pip install -r requirements.txt" aria-label="Copy install command">Copy</button></div>
+              </div>
+            </article>
+            <article class="setup-step">
+              <span class="step-index">03</span>
+              <div>
+                <h3>Calibrate, then launch</h3>
+                <p>The setup checks required gaze calibration and opens EyeSync. Follow the on-screen instructions.</p>
+                <div class="code-line"><code>python setup_and_start.py</code><button class="copy-button" type="button" data-copy="python setup_and_start.py" aria-label="Copy launch command">Copy</button></div>
+              </div>
+            </article>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-wrap command-section" id="voice-commands" aria-labelledby="commands-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A LITTLE VOICE, WHEN YOU WANT IT</p>
+            <h2 id="commands-title">On-screen keyboard,<br><span>your way.</span></h2>
+          </div>
+          <p class="section-intro">Set your speech tool’s push-to-talk shortcut to Tab. Dictate one of these exact phrases into the EyeSync command panel.</p>
+        </div>
+        <div class="command-board">
+          <div class="command-board-head"><span>SUPPORTED PHRASES</span><span>CLICK TO COPY</span></div>
+          <button class="command-row" type="button" data-copy="Open the on-screen keyboard"><span class="command-index">01</span><span>“Open the on-screen keyboard”</span><span class="command-action">Open <b aria-hidden="true">↗</b></span></button>
+          <button class="command-row" type="button" data-copy="Close the on-screen keyboard"><span class="command-index">02</span><span>“Close the on-screen keyboard”</span><span class="command-action">Close <b aria-hidden="true">↗</b></span></button>
+          <button class="command-row" type="button" data-copy="Increase the size of the on-screen keyboard"><span class="command-index">03</span><span>“Increase the size of the on-screen keyboard”</span><span class="command-action">Resize <b aria-hidden="true">↗</b></span></button>
+          <button class="command-row" type="button" data-copy="Decrease the size of the on-screen keyboard"><span class="command-index">04</span><span>“Decrease the size of the on-screen keyboard”</span><span class="command-action">Resize <b aria-hidden="true">↗</b></span></button>
+          <button class="command-row" type="button" data-copy="Let me adjust the position of the on-screen keyboard"><span class="command-index">05</span><span>“Let me adjust the position of the on-screen keyboard”</span><span class="command-action">Position <b aria-hidden="true">↗</b></span></button>
+          <button class="command-row" type="button" data-copy="Done adjusting the position of the on-screen keyboard"><span class="command-index">06</span><span>“Done adjusting the position of the on-screen keyboard”</span><span class="command-action">Finish <b aria-hidden="true">↗</b></span></button>
+          <p class="command-note">Only the listed phrases are acted on. OSK repositioning needs mouse control enabled and the pointer on the keyboard’s title bar.</p>
+        </div>
+      </section>
+
+      <section class="privacy-section" id="privacy" aria-labelledby="privacy-title">
+        <div class="section-wrap privacy-layout">
+          <div class="privacy-emblem" aria-hidden="true">
+            <svg viewBox="0 0 88 88"><path d="M44 8 72 19v21c0 18-11 31-28 40C27 71 16 58 16 40V19L44 8Z"/><path d="m31 43 9 9 18-19"/></svg>
+          </div>
+          <div>
+            <p class="eyebrow">BUILT WITH PRIVACY IN MIND</p>
+            <h2 id="privacy-title">Your camera stays<br><span>with your computer.</span></h2>
+            <p>EyeSync processes camera frames locally and does not save webcam photos or video. Calibration and gesture samples are numeric local data. The site itself never asks for camera or microphone access.</p>
+            <p class="privacy-caveat">If you use a third-party speech tool, its handling of audio is governed by that provider’s settings and privacy policy.</p>
+          </div>
+          <a class="text-link privacy-link" href="https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System#privacy" target="_blank" rel="noreferrer">Read project privacy notes <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="closing section-wrap" aria-labelledby="closing-title">
+        <div>
+          <p class="eyebrow">OPEN SOURCE. BUILT TO BE ADAPTED.</p>
+          <h2 id="closing-title">Make space for<br><span>another way.</span></h2>
+        </div>
+        <div class="closing-action">
+          <p>Explore the code, read the setup notes, and make EyeSync work for you.</p>
+          <a class="button button-accent" href="https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top">
+        <img src="assets/eyesync.svg" width="30" height="30" alt="">
+        <span>eyesync<span class="brand-period">.</span></span>
+      </a>
+      <p>A hands-free interaction project. Not a medical device.</p>
+      <a href="https://github.com/vexelbotrps-lgtm/Face-Controlled-Operating-System" target="_blank" rel="noreferrer">Open source on GitHub ↗</a>
+      <span class="footer-year">© <span id="year">2026</span> EyeSync</span>
+    </footer>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
