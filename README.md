@@ -1,8 +1,8 @@
-# EyeSync project website
+# GazeBrain website
 
-This is a dependency-free static guide for the EyeSync Windows accessibility
-project. It documents the gestures and setup that exist in the parent
-repository; it does not access a visitor's camera, microphone, or mouse.
+This is a dependency-free static website for the EyeSync Windows accessibility
+project. It documents the gestures and setup for the local app; it does not
+access a visitor's camera, microphone, or mouse.
 
 ## Preview locally
 
@@ -16,7 +16,7 @@ Then open <http://localhost:8000>.
 
 ## Publish with GitHub Pages
 
-The repository workflow at `.github/workflows/pages.yml` deploys this folder
+The repository workflow at `.github/workflows/pages.yml` deploys this website
 when changes are pushed to `main`. In the repository's **Settings → Pages**,
 choose **GitHub Actions** as the build and deployment source. The site is
 published at the repository's GitHub Pages URL.

@@ -17,7 +17,7 @@ siteNav.querySelectorAll("a").forEach((link) => {
   });
 });
 
-const savedTheme = localStorage.getItem("eyesync-theme");
+const savedTheme = localStorage.getItem("gazebrain-theme");
 if (savedTheme === "dark") {
   document.body.dataset.theme = "dark";
   themeButton.setAttribute("aria-pressed", "true");
@@ -31,7 +31,7 @@ themeButton.addEventListener("click", () => {
   } else {
     delete document.body.dataset.theme;
   }
-  localStorage.setItem("eyesync-theme", dark ? "dark" : "light");
+  localStorage.setItem("gazebrain-theme", dark ? "dark" : "light");
   themeButton.setAttribute("aria-pressed", String(dark));
   themeButton.setAttribute("aria-label", `Switch to ${dark ? "light" : "dark"} theme`);
 });
