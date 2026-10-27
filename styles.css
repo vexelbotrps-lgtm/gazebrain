@@ -48,7 +48,7 @@ a { color: inherit; }
   min-height: 540px;
   grid-template-columns: 1.2fr .8fr;
   align-items: center;
-  gap: 64px;
+  gap: clamp(28px, 4.7vw, 64px);
   padding-block: 70px;
 }
 .eyebrow { margin: 0 0 14px; color: #52714c; font-size: 11px; font-weight: 750; letter-spacing: .13em; }
@@ -108,7 +108,7 @@ body[data-theme="dark"] {
 body[data-theme="dark"] h1 em { color: #b8c8aa; }
 body[data-theme="dark"] .eyebrow { color: #b6d59c; }
 body[data-theme="dark"] .choice-grid article { background: #202e29; }
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   .hero { min-height: 0; grid-template-columns: 1fr; gap: 34px; padding-block: 56px 45px; }
   .hero-art { min-height: 240px; }
   .getting-started { padding-bottom: 55px; }
