@@ -7,8 +7,13 @@ The download button links to the complete EyeSync source ZIP. A browser cannot
 install or run a Windows app directly from a click. After extracting the ZIP,
 Windows users double-click `EyeSync.bat`; it creates a local virtual environment,
 installs all packages from `requirements.txt`, and opens `eyesync_app.py`.
-The bootstrap selects the newest installed Python 3.10+ interpreter. Python
-must already be installed, and first-time setup needs an internet connection.
+The bootstrap selects the newest installed Python 3.10–3.12 interpreter.
+Install Python 3.12.10 (64-bit) from the official
+[Windows installer](https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe)
+first, and check **Add python.exe to PATH** in its installer. EyeSync's current
+MediaPipe dependency does not support newer Python minor versions. First-time
+setup requires an internet connection.
+
 The app has two main actions:
 
 - **Calibrate** runs gaze calibration, smile sample calibration, and wink

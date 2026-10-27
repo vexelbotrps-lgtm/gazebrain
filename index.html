@@ -7,7 +7,7 @@
     <meta name="description" content="Download EyeSync, a local Windows accessibility app for hands-free computer control.">
     <title>EyeSync — hands-free computer control</title>
     <link rel="icon" href="assets/gazebrain.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20261027-2">
+    <link rel="stylesheet" href="styles.css?v=20261027-3">
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -36,8 +36,16 @@
           </a>
           <p class="download-note">
             Extract the ZIP and double-click <strong>EyeSync.bat</strong>. It uses
-            your newest installed Python 3.10+ to install the app's dependencies
+            your newest installed Python 3.10–3.12 to install the app's dependencies
             and open EyeSync. Python and an internet connection are needed for setup.
+          </p>
+          <p class="download-note">
+            Before setup, install Python 3.12.10 for Windows (64-bit), and check
+            <strong>Add python.exe to PATH</strong> in the installer.
+            <a href="https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe">
+              Download Python 3.12.10 (64-bit)
+            </a>
+            EyeSync's MediaPipe dependency does not yet support newer Python versions.
           </p>
         </div>
         <div class="hero-art" role="img" aria-label="EyeSync eye illustration">
