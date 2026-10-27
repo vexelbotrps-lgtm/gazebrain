@@ -16,9 +16,10 @@ setup requires an internet connection.
 
 The app has two main actions:
 
-- **Calibrate** runs gaze calibration, smile sample calibration, and wink
-  sample calibration in sequence. Each step must return successfully and pass
-  validation before the next step starts.
+- **Calibrate** runs gaze, smile-sample, wink-sample, and both-eyes-closed Tab
+  gesture calibration in sequence. Each step must return successfully and pass
+  validation before the next step starts. The downloaded ZIP also contains
+  `GETTING_STARTED.txt` with Python 3.12.10 and Handy AI setup notes.
 - **Start EyeSync** starts the tracker and command panel without forcing
   calibration. Cursor movement remains unavailable until gaze calibration is
   complete; optional smile/wink sample archives do not block startup.
