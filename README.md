@@ -3,8 +3,10 @@
 This is a dependency-free static download page for the EyeSync Windows
 accessibility app. It does not access a visitor's camera, microphone, or mouse.
 
-The download button links to the complete EyeSync setup ZIP. A browser cannot
-install or run a Windows app directly from a click. After extracting the ZIP,
+The download button links to the curated EyeSync setup ZIP in `downloads/`.
+It contains the current app files, not repository history, datasets, or runtime
+data. A browser cannot install or run a Windows app directly from a click.
+After extracting the ZIP,
 Windows users double-click `EyeSync.bat` once. It automatically installs Python
 3.12.10 (64-bit) if Python 3.12 is not already present, installs Handy from its
 official GitHub release, sets up all EyeSync requirements, creates a Desktop
