@@ -1,8 +1,25 @@
 # GazeBrain website
 
-This is a dependency-free static website for the EyeSync Windows accessibility
-project. It documents the gestures and setup for the local app; it does not
-access a visitor's camera, microphone, or mouse.
+This is a dependency-free static download page for the EyeSync Windows
+accessibility app. It does not access a visitor's camera, microphone, or mouse.
+
+The download button links to the complete EyeSync source ZIP. A browser cannot
+install or run a Windows app directly from a click. After extracting the ZIP,
+Windows users double-click `EyeSync.bat`; it creates a local virtual environment,
+installs all packages from `requirements.txt`, and opens `eyesync_app.py`.
+The bootstrap selects the newest installed Python 3.10+ interpreter. Python
+must already be installed, and first-time setup needs an internet connection.
+The app has two main actions:
+
+- **Calibrate** runs gaze calibration, smile sample calibration, and wink
+  sample calibration in sequence. Each step must return successfully and pass
+  validation before the next step starts.
+- **Start EyeSync** starts the tracker and command panel without forcing
+  calibration. Cursor movement remains unavailable until gaze calibration is
+  complete; optional smile/wink sample archives do not block startup.
+
+Calibration is optional to start the app. The page keeps
+the selected light/dark theme in local browser storage when available.
 
 ## Preview locally
 
@@ -22,5 +39,4 @@ choose **GitHub Actions** as the build and deployment source. The site is
 published at the repository's GitHub Pages URL.
 
 The site is plain HTML, CSS, JavaScript, and a local SVG icon. It has no build
-step, package install, external font, analytics, or third-party runtime.
-Browser local storage is used only to remember the visitor's theme choice.
+step, external font, analytics, or third-party runtime.
